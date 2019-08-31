@@ -1,0 +1,42 @@
+{
+  "logs": [
+    {
+      "message": "working in station 1",
+      "attention": true,
+      "tech": "sam smith",
+      "date": "2019-08-31T20:17:06.754Z",
+      "id": 1
+    },
+    {
+      "message": "change the ip on computer 201.201.1.1",
+      "attention": false,
+      "tech": "sara wilson",
+      "date": "2019-08-31T20:17:26.402Z",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "message": "text Updatess",
+      "attention": false,
+      "tech": "john doe",
+      "date": "2019-08-31T21:24:42.663Z"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 3,
+      "firstName": "Sara",
+      "lastName": "Wilson"
+    }
+  ]
+}
