@@ -15,11 +15,18 @@
       "id": 2
     },
     {
-      "id": 3,
-      "message": "text Updatess",
-      "attention": false,
-      "tech": "john doe",
-      "date": "2019-08-31T21:24:42.663Z"
+      "message": "someone hack in my account",
+      "attention": true,
+      "tech": "John Paul Gabule",
+      "date": "2019-08-31T22:25:02.481Z",
+      "id": 3
+    },
+    {
+      "message": "change the ram on ip 201.2.2.1",
+      "attention": true,
+      "tech": "joshua gabule",
+      "date": "2019-08-31T22:25:24.786Z",
+      "id": 4
     }
   ],
   "techs": [
@@ -37,6 +44,16 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "John Paul",
+      "lastName": "Gabule",
+      "id": 4
+    },
+    {
+      "firstName": "joshua",
+      "lastName": "gabule",
+      "id": 5
     }
   ]
 }

@@ -1,16 +1,23 @@
 import React, {useState} from 'react';
-import M from 'materialize-css/dist/js/materialize.min';
 
-const AddTechModal = () => {
+import M from 'materialize-css/dist/js/materialize.min';
+import {connect} from "react-redux";
+import PropTypes from 'prop-types';
+import {addTech} from "../../actions/techActions";
+
+const AddTechModal = ({addTech}) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
 
     const onSubmit = () => {
         if (firstName === '' || lastName === '') {
             M.toast({html: 'Please enter a first name or last name'});
-        }  else {
-            console.log(firstName, lastName);
-            // clear input field
+        } else {
+           addTech({
+               firstName,
+               lastName
+           });
+            M.toast({html: `${firstName} ${lastName} was been added as a tech`});
             setFirstName('');
             setLastName('');
         }
@@ -21,13 +28,15 @@ const AddTechModal = () => {
                 <h4>New Technician</h4>
                 <div className="row">
                     <div className="input-field">
-                        <input type="text" name='firstName' value={firstName} onChange={e => setFirstName(e.target.value)}/>
+                        <input type="text" name='firstName' value={firstName}
+                               onChange={e => setFirstName(e.target.value)}/>
                         <label htmlFor="firstName" className='active'>First Name</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field">
-                        <input type="text" name='lastName' value={lastName} onChange={e => setLastName(e.target.value)}/>
+                        <input type="text" name='lastName' value={lastName}
+                               onChange={e => setLastName(e.target.value)}/>
                         <label htmlFor="lastName" className='active'>Last Name</label>
                     </div>
                 </div>
@@ -38,5 +47,8 @@ const AddTechModal = () => {
         </div>
     );
 };
+AddTechModal.propTypes = {
+    addTech: PropTypes.func.isRequired
+};
 
-export default AddTechModal;
+export default connect(null, {addTech})(AddTechModal);
